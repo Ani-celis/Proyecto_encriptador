@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <!--Define la codificación de caracteres del documento como UTF-8, 
+   lo que permite que se usen caracteres especiales como acentos y símbolos.--> 
+    <meta charset="UTF-8">
+    <!--l viewport es la porción del área visible de un plano y se utiliza 
+    como unidad de medida en CSS para crear páginas web 100% responsivas.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Define el título de la página que aparecerá en la pestaña del navegador.--> 
+    <title>Página de Encriptado/Desencriptado</title>
+    <!--Vincula un archivo CSS externo que contiene los estilos de la página. 
+    Esto permite que la estructura HTML esté separada de la presentación visual.-->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<!--El <body> contiene todo el contenido visible de la página web.-->
+<body>
+  <!--Este div con la clase container actúa como un contenedor principal que agrupa todos los elementos de la página.
+   Esta clase está estilizada en el archivo CSS vinculado (style/style.css)-->  
+    <div class="container">
+        <h1>Encriptador de Texto</h1>
+        <p class="recomendacion"><i class="fas fa-info-circle"></i>  Por favor, ingrese solo letras minúsculas y sin acentos.</p>
+        <!--El <textarea> con el id="inputText" es un campo de texto donde el usuario puede ingresar el texto que desea encriptar o desencriptar.
+            El placeholder proporciona una pista visual cuando el campo está vacío, indicando al usuario que ingrese el texto.-->
+        <textarea id="inputText" placeholder="Ingrese el texto aquí..."></textarea>
+        <!--Agrupa dos botones, cada uno tiene una funcion especifica-->
+        <div class="buttons">
+            <!-- Un botón que, al ser clicado, ejecuta la función encriptar() definida en el archivo JavaScript externo (script.js).-->
+            <button onclick="encriptar()">Encriptar</button>
+            <!--Un botón que, al ser clicado, ejecuta la función desencriptar().-->
+            <button onclick="desencriptar()">Desencriptar</button>
+        </div>
+        <!--<textarea>, pero esta vez con el id="outputText", que muestra el resultado de la encriptación o desencriptación. Tiene el atributo readonly, lo que significa que el usuario no puede modificar directamente su contenido. 
+            Este campo también tiene un placeholder que indica que el texto encriptado/desencriptado aparecerá aquí.-->
+        <textarea id="outputText" placeholder="Texto encriptado/desencriptado aparecerá aquí..." readonly></textarea>
+        
+        <div class="buttons">
+            <!--Un botón que ejecuta la función copiarTexto() al ser clicado. 
+            Esta función copiará el contenido de outputText al portapapeles del usuario.-->
+            <button onclick="copiarTexto()">Copiar</button>
+        </div>
+    </div>
+    <!--Este script vincula un archivo JavaScript externo (script.js) que contiene las funciones encriptar(), desencriptar(), y copiarTexto(). 
+        Estas funciones manejan la lógica para encriptar, desencriptar, y copiar el texto respectivamente.-->
+    <script src="script.js"></script>
+    <footer class="footer"> 
+        <p>Desarrollado por Aniyenni Salazar</p>
+    </footer>
+</body>
+</html>
