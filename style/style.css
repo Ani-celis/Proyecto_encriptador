@@ -1,19 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Dancing+Script:wght@400..700&family=Ga+Maamli&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&family=Krona+One&family=Kumar+One+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Carian&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Triangles&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Dancing+Script:wght@400..700&family=Ga+Maamli&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&family=Krona+One&family=Kumar+One+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Carian&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Triangles&display=swap');/*Cambiar el color y fuente de manera global*/
 :root {
---color-title: #135D66;
---color-buttons:#C75B7A;
---color-container:#F1D3CE;
---color-hover:#758694;
---color-footer:#fff;
---fuente-Montserrat:'Montserrat', sans-serif ;
---fuente-cursiva:  "Grey Qo", cursive;
+    --color-title: #135D66;
+    --color-buttons:#C75B7A;
+    --color-container:#F1D3CE;
+    --color-hover:#758694;
+    --color-footer:#fff;
+    --fuente-Montserrat:'Montserrat', sans-serif ;
+    --fuente-cursiva: "Grey Qo", cursive;
 }
 
 * {
     padding: 0;
     margin: 0;
-    /* asegura que el padding y el borde se incluyan en el ancho y alto total de los elementos, lo que facilita el control del diseño.*/
     box-sizing: border-box;
 }
 
@@ -21,71 +20,64 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-image: url('../images/pexels-stywo-1261728.jpg');
     background-size: cover;
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
-    /*Centra el contenido horizontalmente*/
     justify-content: center;
-    /* centra el contenido verticalmente dentro del contenedor*/
     align-items: center;
-    /*Altura de nuestra pagina*/
     height: 100vh;
     margin: 0;
-    /*Agrega un espacio interior en los bordes del body, en este caso no deseo que tenga ya que quiero que el footer abarque toda la parte inferior.*/
-    padding: 0px;
+    padding: 0;
     flex-direction: column;
 }
 
 .container {
     background-color: var(--color-container);
-    /*40px en la parte superior e inferior y 30px en los laterales.*/
-    padding: 35px 30px;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 550px;
+    max-width: 400px;
     text-align: center;
     margin-top: auto; 
 }
 
 h1 {
     font-family:var(--fuente-cursiva);
-    font-size: 90px;
+    font-size: 3rem;
     font-weight: 400;
-    font-style: normal;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: var(--color-title);
-    text-shadow: #508C9B); /* Sombra suave en el texto */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     transition: text-shadow 0.5s ease-in-out;
 }
 
 h1:hover {
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el mouse */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .recomendacion {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     text-align: left;
 }
 .recomendacion i {
-    margin-right: 10px; /* Añade un espacio entre el ícono y el texto */
-    color: #7c7a7a; /* Cambia el color del ícono */
-    font-size: 20px;  /* Cambia el tamaño del ícono */
+    margin-right: 0.625rem;
+    color: #7c7a7a;
+    font-size: 1.25rem;
 }
-
 
 textarea {
     width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    padding: 12px;
+    height: 6.25rem;
+    margin-bottom: 0.625rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     resize: none;
     transition: border-color 0.3s ease;
@@ -99,28 +91,27 @@ textarea:focus {
 textarea#outputText {
     background-color: #f7f7f7;
     border-color: #ddd;
-    margin-top: 20px; /* Añade espacio encima del textarea */
-
- }
+    margin-top: 1.25rem;
+}
 
 .buttons {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;  /* Añade espacio debajo de los botones */
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
 }
 
 button {
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
     border-radius: 8px;
     background-color: var(--color-buttons);
     color: white;
-    font-size: 14px;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     width: 100%;
-    height: 70%;
+    height: auto;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -133,29 +124,52 @@ button:active {
 }
 
 .footer {
-background-color: var(--color-buttons);
-padding: 20px;
-color: var(--color-footer);
-text-align: center; /*Centra horizontalmente*/
-font-family:var(--fuente-cursiva);
-font-size: 50px;
-font-weight: 400;
-position: relative;
-width: 100%;
-bottom: 0;
-margin-top: auto; /* Empuja el footer al final de la página */
+    background-color: var(--color-buttons);
+    padding: 0.3125rem;
+    color: var(--color-footer);
+    text-align: center;
+    font-family:var(--fuente-cursiva);
+    font-size: 3.125rem;
+    font-weight: 400;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
 }
 
-@media (max-width: 1000px){
-    .header{
-    padding: 20%;
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
     }
 
-    .container{
-      /*Centrar horizontalmente*/
-        justify-content:center;
-        flex-direction: column-reverse;
-        padding: 5%;
-        width: auto;
+    .container {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .footer {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 0.5rem;
+    }
+
+    textarea {
+        height: 5rem;
     }
 }
