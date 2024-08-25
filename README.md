@@ -5,7 +5,6 @@ Una aplicación web sencilla para encriptar y desencriptar texto utilizando un a
 
 - [Descripción](#descripción)
 - [Características](#características)
-- [Instalación](#instalación)
 - [Uso](#uso)
 - [Código del Proyecto](#código-del-proyecto)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
@@ -23,28 +22,6 @@ Una aplicación web sencilla para encriptar y desencriptar texto utilizando un a
 **Encriptación y Desencriptación**: Convierte texto normal en texto encriptado y viceversa utilizando un método de reemplazo.
 - **Interfaz Intuitiva**: Fácil de usar con botones claros y campos de entrada y salida.
 - **Función de Copiar al Portapapeles**: Permite copiar el texto encriptado/desencriptado fácilmente.
-
-
-## Instalación
-
-Entra al directorio del proyecto:
-
-bash
-Copiar código
-cd encriptador
-Abre el archivo index.html en tu navegador:
-
-bash
-Copiar código
-start index.html
-O, si prefieres usar un servidor web local:
-
-bash
-Copiar código
-npm install -g http-server
-http-server
-Visita http://localhost:8080 en tu navegador.
-
 ## Uso
 Ingresar texto: Escribe el texto que deseas encriptar en el campo de entrada.
 Encriptar: Haz clic en el botón "Encriptar" para convertir el texto en un formato encriptado.
